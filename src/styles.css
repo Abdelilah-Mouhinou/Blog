@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+:root{
+    --light-background: #f7eee5;
+    --light-actions: #4a5693;
+    --light-sub-title: #d31920;
+    --light-optional: #e7c4b2;
+
+
+    --dark-background: #131416;
+    --dark-actions: #5b69b3; 
+    --dark-sub-title: #FFF;
+    --dark-optional: #e6cb20;
+}
+@font-face {
+    font-family: "Aquatico";
+    src: url("./assets/fonts/Aquatico-Regular.otf");
+}
+h1{
+        font-family: "Aquatico", sans-serif;
+        letter-spacing: .7rem;
+}
+
+@media (prefers-color-scheme: dark){
+    body {
+        background-color: var(--dark-background);
+        /* color: white; */
+    }
+    h1,a{
+        color: var(--dark-actions);
+    }
+    button{
+        color: var(--dark-sub-title);
+        background-color: var(--dark-actions);
+    }
+}
+
+@media (prefers-color-scheme: light){
+    body{
+        background-color: var(--light-background);
+    }
+
+    h1, a{
+        color: var(--light-actions);
+    }
+
+    button{
+        background-color: var(--light-actions);
+        color: black;
+    }
+}
